@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "novokerka",
+	"version": "${version}",
+	"name": "Novokerka",
+	"description": "Oh zrya ti syuda polez",
+	"authors": [
+		"Chert"
+	],
+	"contact": {
+		"homepage": "https://youtu.be/o-YBDTqX_ZU?si=eFZev17j1AdeM0tY",
+		"sources": "https://github.com/kafelniychert/Novokerka-1.21.1"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/novokerka/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.chert.novokerka.Novokerka"
+		],
+		"fabric-datagen": [
+			"net.chert.novokerka.NovokerkaDataGenerator"
+		],
+		"client": [
+			"net.chert.novokerka.NovokerkaClient"
+		]
+	},
+	"mixins": [
+		"novokerka.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.16.9",
+		"minecraft": "~1.21.1",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
