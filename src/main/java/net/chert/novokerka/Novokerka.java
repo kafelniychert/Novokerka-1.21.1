@@ -1,5 +1,6 @@
 package net.chert.novokerka;
 
+import net.chert.novokerka.entity.ModEntities;
 import net.fabricmc.api.ModInitializer;
 
 import org.slf4j.Logger;
@@ -11,6 +12,6 @@ public class Novokerka implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
-
+		ModEntities.registerModEntities();
 	}
 }
