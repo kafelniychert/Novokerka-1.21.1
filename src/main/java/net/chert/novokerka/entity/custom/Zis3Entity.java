@@ -35,6 +35,7 @@ import org.jetbrains.annotations.Nullable;
 public class Zis3Entity extends AnimalEntity {
     public final AnimationState idleAnimationState = new AnimationState();
     public int idleAnimationTimeout = 0;
+    public int goalTimeout = 0;
     public int shootTimeout = 0;
     public Zis3Entity(EntityType<? extends AnimalEntity> entityType, World world) {
         super(entityType, world);
@@ -76,7 +77,7 @@ public class Zis3Entity extends AnimalEntity {
         else{
             --this.idleAnimationTimeout;
         }
-        /*if(this.goalTimeout <= 0){
+        if(this.goalTimeout <= 0){
             this.goalTimeout = 40;
             if(this.isGoal){
                 this.isGoal = false;
@@ -87,7 +88,7 @@ public class Zis3Entity extends AnimalEntity {
         }
         else{
             --this.goalTimeout;
-        }*/
+        }
     }
     @Override
     public void tick() {

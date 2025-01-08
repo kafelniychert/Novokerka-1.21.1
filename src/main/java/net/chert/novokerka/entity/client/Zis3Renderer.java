@@ -16,7 +16,12 @@ public class Zis3Renderer extends MobEntityRenderer<Zis3Entity, Zis3Model<Zis3En
 
     @Override
     public Identifier getTexture(Zis3Entity entity) {
-        return Identifier.of(Novokerka.MOD_ID, "textures/entity/zis3/texture_zis3.png");
+        if(entity.getIsGoal()) {
+            return Identifier.of(Novokerka.MOD_ID, "textures/entity/zis3/texture_zis3.png");
+        }
+        else{
+            return Identifier.of(Novokerka.MOD_ID, "textures/entity/zis3/texture_tmp.png");
+        }
     }
 
     @Override
